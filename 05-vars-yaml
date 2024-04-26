@@ -1,0 +1,22 @@
+- name: variable
+  hosts: localhost
+  var:
+    Cource: "ansible"
+    Trainer: "Srikar"
+    Duration: "120hrs"
+  tasks:
+  - name: we are overriding the variables
+    vars:
+      Cource: "terraform"
+    ansible.builtins.debug:
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+  
+  - name: we are the variables
+    ansible.builtins.debug:
+      msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+      
+    
+
+      
+
+
