@@ -7,13 +7,17 @@
   tasks:
   - name: we are overriding the variables
     vars:
-      Cource: "terraform"
-    ansible.builtins.debug:
+      Cource: "Devops"
+    ansible.builtin.debug:
       msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
   
-  - name: we are the variables
-    ansible.builtins.debug:
+  - name: print information
+    vars:
+      Cource: "Devops"
+    ansible.builtin.debug:
       msg: "Hi, We are learning {{Course}} from Trainer {{Trainer}}, Duration is {{Duration}}."
+      
+    
       
     
 
