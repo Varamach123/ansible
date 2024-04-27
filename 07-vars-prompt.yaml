@@ -5,10 +5,10 @@
     prompt: enter the user name
     private: false 
 
-  - name: password
+  - name: PASSWORD
     prompt: enter the password 
     private: true  
   tasks:
   - name: to enter the user id and password 
     ansible.builtin.debug:
-      msg: the {{USER_NAME}} and {{PASSWORD}} have entered
+      msg: "Hi, UserName: {{USER_NAME}}. password: {{PASSWORD}} have entered"
