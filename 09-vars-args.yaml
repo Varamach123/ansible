@@ -1,0 +1,6 @@
+- name: variables from argument
+  hosts: localhost
+  tasks:
+  - name: to pass arguments
+    ansible.buitin.debug:
+      msg: "my Name  IS {{NAME}} and from {{STATE}}"
