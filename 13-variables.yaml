@@ -6,12 +6,12 @@
     private: no 
   tasks:
    - name: pls enter the number less than 10 
-     ansible.buitin.debug:
+     ansible.builtin.debug:
        msg: "given thee number is {{NUMBER}} is less than 10"
      when: NUMBER | int < 10
 
    - name: pls enter the number greater and equal  10 
-     ansible.buitin.debug:
+     ansible.builtin.debug:
        msg: "given thee number is {{NUMBER}} greater and equal  10"
      when: NUMBER | int >= 10
 
