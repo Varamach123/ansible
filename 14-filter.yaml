@@ -16,12 +16,12 @@
      msg: "{{greets | upper}}"
 
 - name: lower
-  tasks: localhost
+  hosts: localhost
   vars:
    greets: "trhfghuituj"
   tasks:
   - name: lower case
     ansible.builtin.debug:
-     msg: "{{greets | lower}}
+     msg: "{{greets | lower}}"
 
   
