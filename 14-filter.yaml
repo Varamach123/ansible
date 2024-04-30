@@ -13,5 +13,15 @@
   tasks:
   - name: enter the lower
     ansible.builtin.debug:
-     msg: "pls {{greets}} | upper"
+     msg: "{{greets | upper}}"
+
+- name: lower
+  tasks: localhost
+  vars:
+   greets: "trhfghuituj"
+  tasks:
+  - name: lower case
+    ansible.builtin.debug:
+     msg: "{{greets | lower}}
+
   
