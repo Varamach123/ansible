@@ -29,7 +29,7 @@
     vars:
      nums: [20, 22, 20, 24, 18, 22]
     tasks: 
-     - name: to get the unique
+    - name: to get the unique
        ansible.builtin.debug:
         msg: "{{nums | unique}}"
 
