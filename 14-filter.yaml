@@ -24,4 +24,40 @@
     ansible.builtin.debug:
      msg: "{{greets | lower}}"
 
+
+  - name: unique numbers
+    hosts: localhost
+    vars:
+     nums: [20, 22, 20, 24, 18, 22]
+    tasks: 
+     - name: to get the unique
+       ansible.builtin.debug:
+        msg: "{{nums | unique}}"
+
+
+  - name: min and max
+    hosts: localhost
+    vars:
+     minmax: [20, 48, 45, 26, 13]
+    tasks:
+    - name: to get the min and max
+       ansible.builtin.debug:
+        msg: "min {{minmax | min}}, max {{minmax | max}}"
+
+
+  - name: to get the list 
+    hosts: localhost
+    vas:
+      my_dict: # this is called as dictionary or map or key/value pairs.
+      Course: Ansbile
+      Trainer: Sivakumar
+      Duration: 120hr
+    tasks:
+  - name: before convert
+    ansible.builtin.debug:
+      msg: "Before convert: {{ my_dict }}"
+  - name: after convert
+    ansible.builtin.debug:
+      msg: "After convert: {{ my_dict | dict2items }}"
+
   
